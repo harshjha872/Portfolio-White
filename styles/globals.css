@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+    background: white;
+    /* background: #101010; */
+    /* background: #040b14; */
+  }
+}
+
+@layer components {
+  .sideBarIcons {
+    @apply relative flex h-10 w-10 justify-center items-center
+    m-1 my-4 bg-white rounded-3xl hover:rounded-xl border-2 border-gray-300
+    transition-all duration-300 ease-linear cursor-pointer hover:text-violet-500;
+  }
+
+  .Navbaritems {
+    @apply py-2 mx-4 text-black hover:text-violet-500 cursor-pointer flex flex-row transition
+    duration-300 ease-linear;
+  }
+}
