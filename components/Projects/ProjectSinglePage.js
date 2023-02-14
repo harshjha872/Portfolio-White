@@ -34,7 +34,7 @@ const ProjectSinglePage = (props) => {
             href={props.link}
             className=" hover:text-violet-500 underline"
           >
-            Youtube link <BiLinkExternal className="inline" />
+            Click here <BiLinkExternal className="inline" />
           </a>
         )}
         <div className={SubHeadingClass}>Technologies</div>

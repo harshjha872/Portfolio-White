@@ -22,6 +22,12 @@ const Projects = () => {
       projectImage: "/robot.jpg",
       endpoint: "obstacle-avoiding-robot",
     },
+    {
+      projectHeading: "MoviesSaga",
+      projectType: "Web",
+      projectImage: "/moviessaga.png",
+      endpoint: "moviessaga",
+    },
   ];
 
   return (
