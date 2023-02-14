@@ -11,7 +11,7 @@ const ProjectDetails = (props) => {
     //IMPORTANT
     if (!router.isReady) return;
 
-    fetch(`http://localhost:3000/api/getproject?slug=${slug}`)
+    fetch(`https://harsh-jha-portfolio.vercel.app/api/getproject?slug=${slug}`)
       .then((a) => {
         return a.json();
       })
