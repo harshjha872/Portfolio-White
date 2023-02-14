@@ -15,7 +15,7 @@ const projectsData = [
       projectImage: "/ecommerce.jpg",
       endpoint: "ecommerce",
       about: "Ecommerce website like amazon where we can buy items and also add it to our cart and we can also remove those items from our cart, order is also available but here only information is passed to the backend. You can only add products to the cart only after login, you can register yourself from the sign up form then you can access features like admin panel from where the owner can add there products to database, they can add prices, description and remove items if they like.Also on the home page pagination is also available where products are populated from the database which is handled by mongoDB and all the backend logic is written in and handled by NodeJS framework(Javascript).",
-      tech:"ReactJS, NodeJS, MongoDB, CSS",
+      tech:"Html, CSS, JavaScript, EJS, NodeJS, MongoDB",
       team:"Solo Project",
       role:"All",
 
@@ -37,7 +37,7 @@ const projectsData = [
       projectImage: "/moviessaga.PNG",
       endpoint: "moviessaga",
       about: "Movies website recommends trending and top-rated movies, as well as TV series. Users can view details such as directors, stars, and ratings, and can bookmark movies to be stored in their profile after logging in or signing up.",
-      tech:"Javascript, Next JS, Tailwind CSS, MongoDB, REST-APIs",
+      tech:"Javascript, Next JS, Redux, Tailwind CSS, MongoDB, REST-APIs",
       team:"Solo Project",
       role:"All",
       link:"https://moviessaga.vercel.app/"
