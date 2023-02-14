@@ -34,7 +34,7 @@ const projectsData = [
     {
       projectHeading: "Moviessaga",
       projectType: "Web",
-      projectImage: "/moviessaga.png",
+      projectImage: "/moviessaga.PNG",
       endpoint: "moviessaga",
       about: "Movies website recommends trending and top-rated movies, as well as TV series. Users can view details such as directors, stars, and ratings, and can bookmark movies to be stored in their profile after logging in or signing up.",
       tech:"Javascript, Next JS, Tailwind CSS, MongoDB, REST-APIs",
