@@ -25,7 +25,7 @@ const Projects = () => {
     {
       projectHeading: "MoviesSaga",
       projectType: "Web",
-      projectImage: "/moviessaga.png",
+      projectImage: "/moviessaga.PNG",
       endpoint: "moviessaga",
     },
   ];
