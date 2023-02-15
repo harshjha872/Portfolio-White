@@ -5,7 +5,7 @@ const ProjectCard = (props) => {
   const href = `/project/${props.endpoint}`;
   return (
     <div className="xl:w-1/4 md:w-1/2 p-4 md:m-4 md:mx-6 lg:m-2">
-      <div className="bg-slate-50 p-6 rounded-lg shadow-lg border">
+      <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
         <Link href={href}>
           <Image
             width={820}
@@ -19,11 +19,11 @@ const ProjectCard = (props) => {
           <h3 className="tracking-widest text-indigo-500 py-2 text-xs font-medium title-font">
             {props.projectType}
           </h3>
-          <h2 className="text-lg text-slate-900 font-medium title-font mb-4">
+          <h2 className="text-lg text-neutral-200 font-medium title-font mb-4">
             {props.projectHeading}
           </h2>
           <Link href={href}>
-            <div className="text-black mt-6 text-sm font-semibold bg-gray-200 rounded-3xl p-2 px-4 cursor-pointer w-fit hover:bg-violet-600 hover:text-white transition duration-300 ease-in-out">
+            <div className="text-neutral-200 mt-6 text-sm font-semibold bg-neutral-700 rounded-3xl p-2 px-4 cursor-pointer w-fit hover:bg-violet-600 hover:text-white transition duration-300 ease-in-out">
               View Details
             </div>
           </Link>

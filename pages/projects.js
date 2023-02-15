@@ -36,7 +36,7 @@ const Projects = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <header className="text-2xl font-bold py-12 px-2 underline underline-offset-4 text-center">
+      <header className="text-2xl py-12 px-2 underline font-semibold underline-offset-4 text-center">
         Recent Projects
       </header>
       <ProjectWrapper>

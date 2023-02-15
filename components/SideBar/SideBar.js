@@ -6,7 +6,7 @@ const SideBar = () => {
   return (
     <div
       className="flex flex-col h-screen w-16 
-    items-center justify-center fixed"
+    items-center justify-end fixed"
     >
       <div className="flex flex-col my-4">
         <ul className="flex flex-col">

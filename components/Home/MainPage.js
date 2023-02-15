@@ -9,11 +9,11 @@ const MainPage = () => {
       className="flex flex-col w-[45vw] h-full items-center m-auto"
     >
       <div className="flex flex-col pt-40">
-        <div className="text-5xl font-extrabold text-neutral-800">
+        <div className="text-5xl font-extrabold">
           <span>Harsh Jha</span>
         </div>
         <div className="flex flex-row text-2xl my-4 ">
-          <span className="text-slate-900">Im </span>
+          <span >Im </span>
           <div className="text-blue-700 mx-2">Developer</div>
         </div>
         <div className="py-3 text-xl">
