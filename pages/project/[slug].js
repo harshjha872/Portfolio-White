@@ -23,7 +23,7 @@ const ProjectDetails = (props) => {
 
   if (content.link) {
     return (
-      <div className=" h-screen w-[45vw] m-auto">
+      <div className=" h-screen w-[65vw] sm:w-[55vw] md:w-[48vw] lg:w-[40vw] m-auto">
         <ProjectSinglePage
           title={content.projectHeading}
           projectImage={content.projectImage}
@@ -37,7 +37,7 @@ const ProjectDetails = (props) => {
     );
   }
   return (
-    <div className="h-screen w-[65vw] sm:w-[55vw] md:w-[48vw] lg:w-[vw] m-auto">
+    <div className="h-screen w-[65vw] sm:w-[55vw] md:w-[48vw] lg:w-[40vw] m-auto">
       <ProjectSinglePage
         title={content.projectHeading}
         projectImage={content.projectImage}
