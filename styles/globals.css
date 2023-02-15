@@ -24,7 +24,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: #A3A3A3;
+    color: #d4d4d4;
     background: #171717;
     /* background: #101010; */
     /* background: #040b14; */
@@ -39,7 +39,7 @@ a {
   }
 
   .Navbaritems {
-    @apply py-2 font-semibold mx-4 text-neutral-400 hover:text-violet-500 cursor-pointer flex flex-row transition
+    @apply py-2 font-semibold mx-4 text-neutral-300 hover:text-violet-500 cursor-pointer flex flex-row transition
     duration-300 ease-linear;
   }
 }
