@@ -5,8 +5,8 @@ import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 const SideBar = () => {
   return (
     <div
-      className="flex flex-col h-screen w-16 border-r-2 border-gray-300
-   bg-white items-center justify-center fixed"
+      className="flex flex-col h-screen w-16 
+    items-center justify-center fixed"
     >
       <div className="flex flex-col my-4">
         <ul className="flex flex-col">
