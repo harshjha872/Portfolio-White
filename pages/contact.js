@@ -15,7 +15,7 @@ const Contact = () => {
         Contact
       </header>
       <main className="w-full flex flex-row h-fit justify-center">
-        <div className="p-8">
+        <div className="py-8 px-20">
           <ul>
             <ContactCard
               icon={<MdLocationPin size={30} />}
