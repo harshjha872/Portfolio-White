@@ -20,17 +20,17 @@ const Contact = () => {
             <ContactCard
               icon={<MdLocationPin size={30} />}
               title="Location"
-              description="Vivekanand Hostel, KIET Group Of Institutions, Ghaziabad"
+              description="KIET Group Of Institutions, Ghaziabad"
             />
             <ContactCard
               icon={<AiOutlineMail size={30} />}
               title="Email"
-              description="harsh.1923ec1128@kiet.edu"
+              description="harshjha872@gmail.com"
             />
             <ContactCard
               icon={<BsPhone size={30} />}
               title="Phone"
-              description="+91-6389840886"
+              description="+91-8738066880"
             />
           </ul>
         </div>
