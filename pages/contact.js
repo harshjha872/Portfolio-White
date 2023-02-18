@@ -11,7 +11,7 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <header className="text-2xl font-semibold py-12 px-2 underline underline-offset-4 text-center">
+      <header className="text-2xl font-black py-12 px-2 text-center">
         Contact
       </header>
       <main className="w-full flex flex-row h-fit justify-center">

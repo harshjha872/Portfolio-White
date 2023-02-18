@@ -10,9 +10,7 @@ const ProjectSinglePage = (props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-2xl font-bold pt-16 underline underline-offset-4 text-center">
-        {props.title}
-      </div>
+      <div className="text-2xl font-black pt-16 text-center">{props.title}</div>
       <div className="relative w-auto h-[22rem] my-16 justify-center items-center">
         <Image
           src={props.projectImage}
