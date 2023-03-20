@@ -20,17 +20,17 @@ const MainPage = () => {
           <span>Hey, I&apos;m Harsh!</span>
         </div>
         <div className="flex text-xl my-5">
-          <span>Welcome to my region 👋</span>
+          <span>Welcome to my spot 👋</span>
           {/* <div className="text-blue-700 mx-2">Developer</div> */}
         </div>
         <div className="pt-3  text-lg">
           I like to code things from scratch, and enjoy bringing ideas to life
-          in the browser. I&apos;m always open to discussing product design work
-          or opportunities
+          in the browser. I&apos;m always open to discussing design work or
+          opportunities
         </div>
         <div className="pt-6  text-lg">
           Interested in working together? We should queue up a time to chat.
-          I&apos;ll buy the coffee.
+          I&apos;ll buy the coffee
         </div>
         <section className="flex flex-col gap-4 py-12">
           <h3 className="text-2xl font-bold tracking-tight md:text-2xl">
