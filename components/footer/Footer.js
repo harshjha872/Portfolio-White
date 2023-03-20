@@ -1,137 +1,92 @@
 import React from "react";
 import SideBar from "../SideBar/SideBar";
 import { BsSpotify } from "react-icons/bs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-const access_tokenFIXED =
-  "BQB5m39O_-11Cb7DfY-a9-_8ay1bpPKbHjVbXjW1FdEjKwR18Hf3VN1GAoomFQXrZSZWGw82Mhgzs3sNufA_5kpgpfYgQB7EsR4YtIfE7ucByT9N5BQi5uAx3WqB2AcEegLc5mdSycSnLDS7_iAih8sU7VH8YOMSCQZDSTtLa_hM2ouOcQ4G-N422zuM0xqGP8n3qMrP5f86-Fib_ZDnoIZMFrz8Joo";
-const refresh_tokenFIXED =
-  "AQDLHv7GJGL7bvSoP3jrqAWbAqtnwFT3ioO-qGvdPfF8LvcP5rdPboLrf_TfHdP7-eQBi3sMpM_hgbYI2U3gwccKyCMDh3QgzauLOtbjbT4eZs9OGutILXleMNROWon3NnU";
-
 const Footer = () => {
   const router = useRouter();
-  // useEffect(() => {
-  //   const client_id = "4136b0e945ef4c56874145beaca08d0f";
-  //   const client_secret = "2e36bb6567d040c1b4202ca9639466f5";
+  const [artist, setArtist] = useState("Spotify");
+  const [song, setSong] = useState("Not Playing");
+  const [songLink, setSongLink] = useState("");
 
-  //   const func = async () => {
-  //     let body = "grant_type=refresh_token";
-  //     body += "&refresh_token=" + refresh_tokenFIXED;
-  //     const response = await fetch("https://accounts.spotify.com/api/token", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/x-www-form-urlencoded",
-  //         Authorization:
-  //           "Basic " +
-  //           new Buffer(client_id + ":" + client_secret).toString("base64"),
-  //       },
-  //       body,
-  //     });
+  useEffect(() => {
+    const func = async () => {
+      let body = "grant_type=refresh_token";
+      body += "&refresh_token=" + process.env.REFRESH_TOKEN;
+      const response = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization:
+            "Basic " +
+            new Buffer(
+              process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET
+            ).toString("base64"),
+        },
+        body,
+      });
 
-  //     const res = await response.json();
-  //     console.log(res);
+      const res = await response.json();
+      // console.log(res);
 
-  //     const recentplays = await fetch(
-  //       "https://api.spotify.com/v1/me/player/currently-playing",
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${res.access_token}`,
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     );
-  //     const data1 = await recentplays.json();
-  //     console.log(data1);
-
-  //     // function generateRandomString(length) {
-  //     //   var text = "";
-  //     //   var possible =
-  //     //     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  //     //   for (var i = 0; i < length; i++) {
-  //     //     text += possible.charAt(Math.floor(Math.random() * possible.length));
-  //     //   }
-  //     //   return text;
-  //     // }
-
-  //     // // const res = await fetch("https://accounts.spotify.com/api/token", {
-  //     // //   method: "POST",
-  //     // //   headers: {
-  //     // //     "Content-Type": "application/x-www-form-urlencoded",
-  //     // //     Authorization:
-  //     // //       "Basic " +
-  //     // //       new Buffer(client_id + ":" + client_secret).toString("base64"),
-  //     // //   },
-  //     // //   body: "grant_type=client_credentials",
-  //     // // });
-
-  //     // // const data = await res.json();
-
-  //     // var redirect_uri = "http://localhost:3000/"; // Your redirect uri
-
-  //     // var state = generateRandomString(16);
-
-  //     // var scope =
-  //     //   "user-read-private user-read-email user-top-read user-read-currently-playing";
-
-  //     // var url = "https://accounts.spotify.com/authorize";
-  //     // url += "?response_type=code";
-  //     // url += "&client_id=" + encodeURIComponent(client_id);
-  //     // url += "&scope=" + encodeURIComponent(scope);
-  //     // url += "&redirect_uri=" + encodeURIComponent(redirect_uri);
-  //     // url += "&state=" + encodeURIComponent(state);
-
-  //     // console.log(url);
-
-  //     // const { code } = router.query;
-
-  //     // if (code) {
-  //     //   let body = "grant_type=authorization_code";
-  //     //   body += "&code=" + encodeURI(code);
-  //     //   body += "&redirect_uri=" + encodeURI(redirect_uri);
-
-  //     //   const res = await fetch("https://accounts.spotify.com/api/token", {
-  //     //     method: "POST",
-  //     //     headers: {
-  //     //       "Content-Type": "application/x-www-form-urlencoded",
-  //     //       Authorization:
-  //     //         "Basic " +
-  //     //         new Buffer(client_id + ":" + client_secret).toString("base64"),
-  //     //     },
-  //     //     body,
-  //     //   });
-  //     //   const data = await res.json();
-  //     //   console.log(data);
-
-  //     //   const recentplays = await fetch(
-  //     //     "https://api.spotify.com/v1/me/player/currently-playing",
-  //     //     {
-  //     //       headers: {
-  //     //         Authorization: `Bearer ${data.access_token}`,
-  //     //         "Content-Type": "application/json",
-  //     //       },
-  //     //     }
-  //     //   );
-  //     //   const data1 = await recentplays.json();
-  //     //   console.log(data1);
-
-  //     // }
-  //     // ("https://accounts.spotify.com/authorize?response_type=code&client_id=4136b0e945ef4c56874145beaca08d0f&scope=user-read-private%20user-read-email%20user-top-read%20user-read-currently-playing&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&state=qgQ4wBz3e85QRk1U");
-  //   };
-  //   func();
-  // }, [router]);
+      const recentplays = await fetch("https://api.spotify.com/v1/me/player", {
+        headers: {
+          Authorization: `Bearer ${res.access_token}`,
+          "Content-Type": "application/json",
+        },
+      });
+      // const data1 = await recentplays.json();
+      // console.log(recentplays);
+      if (recentplays.status === 200) {
+        const songData = await recentplays.json();
+        if (
+          songData.is_playing &&
+          songData.currently_playing_type === "track"
+        ) {
+          // console.log(songData);
+          let artists = [];
+          for (let i = 0; i < songData.item.artists.length; i++) {
+            artists.push(songData.item.artists[i].name);
+          }
+          setArtist(artists.join(", "));
+          setSong(songData.item.name);
+          setSongLink(songData.item.external_urls.spotify);
+        } else {
+          setArtist("Spotify");
+          setSong("Not Playing");
+          setSongLink("");
+        }
+      } else {
+        setArtist("Spotify");
+        setSong("Not Playing");
+        setSongLink("");
+      }
+    };
+    setInterval(() => {
+      func();
+    }, 90000);
+    // func();
+  }, [router]);
 
   return (
     <section>
       <hr className="h-px my-4  border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
-      {/* <div className="flex justify-between text-neutral-600 dark:text-neutral-300 text-sm font-semibold">
-        <div>Not Playing - Spotify</div>
-        <div className="text-green-500 pr-1">
+      <div className="flex justify-between text-neutral-600 dark:text-neutral-300 text-sm font-semibold">
+        <a href={songLink}>
+          {song} - {artist}
+        </a>
+        <div className="text-green-500 pr-1 flex">
           <BsSpotify />
+          {/* <div className="relative flex w-5 h-4 gap-[1px]">
+            <span className="w-1 h-1/2 origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave"></span>
+            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-2"></span>
+            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-3"></span>
+            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-4"></span>
+          </div> */}
         </div>
-      </div> */}
+      </div>
       <div className="my-3 w-fit cursor-pointer text-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-600 text-sm dark:text-neutral-500 font-semibold">
         <a
           href="https://github.com/harshjha872"
