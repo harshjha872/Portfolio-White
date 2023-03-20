@@ -33,7 +33,7 @@ const Footer = () => {
             {song} - {artist}
           </a>
 
-          <div className="text-green-500 pr-8 flex">
+          <div className="text-green-500 pr-10 flex">
             <div className="soundwaveContainer ">
               <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 soundwave bar1"></span>
               <span className="w-1 h-1/2 origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 soundwave animation-delay-2 bar2"></span>
