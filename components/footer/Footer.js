@@ -13,7 +13,7 @@ const Footer = () => {
 
   useEffect(() => {
     const res = async () => {
-      const res = await axios("http://localhost:3000/api/hello");
+      const res = await axios("http://harshv1.vercel.app/api/hello");
       setArtist(res.data.artist);
       setSong(res.data.name);
       setSongLink(res.data.link);
