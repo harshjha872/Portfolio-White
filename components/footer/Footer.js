@@ -28,16 +28,20 @@ const Footer = () => {
     <section>
       <hr className="h-px my-4  border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
       <div className="flex justify-between text-neutral-600 dark:text-neutral-300 text-sm font-semibold">
-        <a href={songLink}>
-          {song} - {artist}
-        </a>
+        {songLink ? (
+          <a href={songLink}>
+            {song} - {artist}
+          </a>
+        ) : (
+          `${song} - ${artist}`
+        )}
         <div className="text-green-500 pr-1 flex">
           <BsSpotify />
           {/* <div className="relative flex w-5 h-4 gap-[1px]">
-            <span className="w-1 h-1/2 origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave"></span>
-            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-2"></span>
-            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-3"></span>
-            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-4"></span>
+            <span className="w-1 h-full origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-"></span>
+            <span className="w-1 h-1/2 origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-2"></span>
+            <span className="w-1 h-2/3 origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-3"></span>
+            <span className="w-1 h-1/3 origin-bottom bg-neutral-600 rounded-t-md dark:bg-neutral-400 animate-music-wave animation-delay-4"></span>
           </div> */}
         </div>
       </div>
