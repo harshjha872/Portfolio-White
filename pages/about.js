@@ -26,6 +26,7 @@ const About = () => {
           probably looking at the 💻 screen right now trying to resolve a bug
           sitting in the room all day 🦉
         </div>
+        <div className="pt-4 text-lg">I might laugh at my own jokes</div>
         {/* <div className="pt-4 text-lg">
           I&apos;m Just a quite kid probably looking at the computer screen
           right now trying to resolve a bug sitting in the room all day
