@@ -21,7 +21,7 @@ const Footer = () => {
     res();
     setInterval(() => {
       res();
-    }, 90000);
+    }, 30000);
   }, [router]);
 
   return (

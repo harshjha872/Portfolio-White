@@ -16,13 +16,15 @@ export default async function handler(req, res) {
 
   const spotifyResponse = await response.json();
 
+  if (!spotifyResponse) res.json({ message: "something went wrong" });
+
   const recentplays = await fetch("https://api.spotify.com/v1/me/player", {
     headers: {
       Authorization: `Bearer ${spotifyResponse.access_token}`,
       "Content-Type": "application/json",
     },
   });
-
+  
   if (recentplays.status === 200) {
     const songData = await recentplays.json();
     if (songData.is_playing && songData.currently_playing_type === "track") {
