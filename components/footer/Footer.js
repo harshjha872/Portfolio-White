@@ -22,62 +22,6 @@ const Footer = () => {
     setInterval(() => {
       res();
     }, 90000);
-    // const func = async () => {
-    //   let body = "grant_type=refresh_token";
-    //   body += "&refresh_token=" + process.env.REFRESH_TOKEN;
-    //   const response = await fetch("https://accounts.spotify.com/api/token", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/x-www-form-urlencoded",
-    //       Authorization:
-    //         "Basic " +
-    //         new Buffer(
-    //           process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET
-    //         ).toString("base64"),
-    //     },
-    //     body,
-    //   });
-
-    //   const res = await response.json();
-    //   // console.log(res);
-
-    //   const recentplays = await fetch("https://api.spotify.com/v1/me/player", {
-    //     headers: {
-    //       Authorization: `Bearer ${res.access_token}`,
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-    //   // const data1 = await recentplays.json();
-    //   // console.log(recentplays);
-    //   if (recentplays.status === 200) {
-    //     const songData = await recentplays.json();
-    //     if (
-    //       songData.is_playing &&
-    //       songData.currently_playing_type === "track"
-    //     ) {
-    //       // console.log(songData);
-    //       let artists = [];
-    //       for (let i = 0; i < songData.item.artists.length; i++) {
-    //         artists.push(songData.item.artists[i].name);
-    //       }
-    //       setArtist(artists.join(", "));
-    //       setSong(songData.item.name);
-    //       setSongLink(songData.item.external_urls.spotify);
-    //     } else {
-    //       setArtist("Spotify");
-    //       setSong("Not Playing");
-    //       setSongLink("");
-    //     }
-    //   } else {
-    //     setArtist("Spotify");
-    //     setSong("Not Playing");
-    //     setSongLink("");
-    //   }
-    // };
-    // setInterval(() => {
-    //   func();
-    // }, 90000);
-    // func();
   }, [router]);
 
   return (
