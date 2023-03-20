@@ -29,7 +29,7 @@ const Footer = () => {
       });
 
       const res = await response.json();
-      // console.log(res);
+      console.log(res);
 
       const recentplays = await fetch("https://api.spotify.com/v1/me/player", {
         headers: {
