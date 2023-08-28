@@ -5,22 +5,29 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const [theme, setTheme] = useState("");
   useEffect(() => {
+    
+    document.body.classList.add("dark");
+    setTheme("dark");
+    localStorage.theme = "dark";
+    document.body.classList.add("text-[#d4d4d4]");
+    document.body.classList.add("bg-[#121212]");
+
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.body.classList.add("dark");
-      setTheme("dark");
-      localStorage.theme = "dark";
-    } else {
-      localStorage.theme = "light";
-      document.body.classList.remove("dark");
-      document.body.classList.add("bg-neutral-100");
-      document.body.classList.add("text-neutral-900");
-      setTheme("");
-    }
+    // if (
+    //   localStorage.theme === "dark" ||
+    //   (!("theme" in localStorage) &&
+    //     window.matchMedia("(prefers-color-scheme: dark)").matches)
+    // ) {
+    //   document.body.classList.add("dark");
+    //   setTheme("dark");
+    //   localStorage.theme = "dark";
+    // } else {
+    //   localStorage.theme = "light";
+    //   document.body.classList.remove("dark");
+    //   document.body.classList.add("bg-neutral-100");
+    //   document.body.classList.add("text-neutral-900");
+    //   setTheme("");
+    // }
 
     // // Whenever the user explicitly chooses light mode
     // localStorage.theme = "light";
@@ -76,10 +83,14 @@ const Navbar = () => {
               setTheme("");
               document.body.classList.add("bg-neutral-100");
               document.body.classList.add("text-neutral-900");
+              document.body.classList.remove("text-[#d4d4d4]");
+              document.body.classList.remove("bg-[#121212]");
             } else {
               setTheme("dark");
               document.body.classList.remove("bg-neutral-100");
               document.body.classList.remove("text-neutral-900");
+              document.body.classList.add("text-[#d4d4d4]");
+              document.body.classList.add("bg-[#121212]");
             }
           }}
           className="transition duration-200 ease-linear bg-neutral-200 border-neutral-300 hover:border-neutral-400 dark:bg-neutral-900 h-fit p-1 rounded-md border-[3px] dark:border-neutral-800 dark:hover:border-neutral-700"
