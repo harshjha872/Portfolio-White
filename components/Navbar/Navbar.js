@@ -5,13 +5,18 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const [theme, setTheme] = useState("");
   useEffect(() => {
-    
-    document.body.classList.add("dark");
-    setTheme("dark");
-    localStorage.theme = "dark";
-    document.body.classList.add("text-[#d4d4d4]");
-    document.body.classList.add("bg-[#121212]");
-
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add("dark");
+      setTheme("dark");
+      localStorage.theme = "dark";
+      document.body.classList.add("text-[#d4d4d4]");
+      document.body.classList.add("bg-[#121212]");
+    } else {
+      setTheme("");
+      localStorage.theme = "light";
+      document.body.classList.add("bg-neutral-100");
+      document.body.classList.add("text-neutral-900");
+    }
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     // if (
     //   localStorage.theme === "dark" ||
