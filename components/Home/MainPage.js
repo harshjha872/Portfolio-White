@@ -24,13 +24,12 @@ const MainPage = () => {
           {/* <div className="text-blue-700 mx-2">Developer</div> */}
         </div>
         <div className="pt-3  text-lg">
-          I like to code things from scratch, and enjoy bringing ideas to life
-          in the browser. I&apos;m always open to discussing design work or
-          opportunities
+        A Full Stack Developer with a zest for innovation. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I&apos;m always open to discussing design work, currently on the lookout for exciting opportunities in the IT realm
         </div>
         <div className="pt-6  text-lg">
-          Interested in working together? We should queue up a time to chat.
-          I&apos;ll buy the coffee
+        
+          Interested in working together? We should queue up a time to chat. Let&apos;s connect and craft some digital magic together! 💼
+          
         </div>
         <section className="flex flex-col gap-4 py-12">
           <h3 className="text-2xl font-bold tracking-tight md:text-2xl">

@@ -15,22 +15,25 @@ const About = () => {
         </div>
 
         <div className="pt-7 text-lg">
-          Hey, I&apos;m Harsh! I&apos;m a Fullstack developer working my way up.
-          Welcome to my spot on the web for my projects, interests, and anything
-          else I want to share about me. Check out the projects page to see a
+         Welcome to my digital playground! I&apos;m Harsh Jha, a seasoned Full Stack Developer 📈,
+          This is my digital domain for my projects, interests, and anything
+          else I wanna share. check out the projects page to see a
           highlight of my work on the web 🕸
         </div>
         <div className="pt-4 text-lg">
           My only motivation for this site is to show what I&apos;ve learned and
           made till now, and I hope you like it. I&apos;m Just a quite kid
           probably looking at the 💻 screen right now trying to resolve a bug
-          sitting in the room all day 🦉
+          sitting in the room all day 🦉   
+        </div>
+        <div className="pt-4 text-lg">
+        When I&apos;m not immersed in code, you&apos;ll find me gaming 🎮, grooving to music 🎶, or exploring the vast expanse of the internet 🌐.  
         </div>
         {/* <div className="pt-4 text-lg">I might laugh at my own jokes</div> */}
         {/* <div className="pt-4 text-lg">
-          I&apos;m Just a quite kid probably looking at the computer screen
-          right now trying to resolve a bug sitting in the room all day
-        </div> */}
+                I&apos;m Just a quite kid probably looking at the computer screen
+                right now trying to resolve a bug sitting in the room all day
+              </div> */}
         <div className="pt-4 text-lg">
           You can contact me by email at{" "}
           <a
@@ -87,17 +90,17 @@ const About = () => {
         <div className="text-3xl font-bold pt-6">Interests</div>
         <hr className="h-px my-1 border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
         <ul className="list-disc pl-5 py-3">
-          <li>Gaming - currently enjoying Valorant 🎮 </li>
+          <li>Gaming 🎮 </li>
           <li>
             Music 🎵
             {/* <a
-              className="dark:text-indigo-500 underline"
-              href="https://open.spotify.com/playlist/37i9dQZF1DX4GsmbWgWBBu?si=302792a6d9b7426e"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Playlist
-            </a> */}
+            className="dark:text-indigo-500 underline"
+            href="https://open.spotify.com/playlist/37i9dQZF1DX4GsmbWgWBBu?si=302792a6d9b7426e"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Playlist
+          </a> */}
           </li>
           <li>Watching random stuff on the internet ✨</li>
         </ul>

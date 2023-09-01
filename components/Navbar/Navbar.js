@@ -48,13 +48,19 @@ const Navbar = () => {
 
   const ProjectClass = `${
     router.pathname.split("/")[1] === "projects"
-      ? "Navbaritems group border-current dark:text-white border-yellow-500 hover:border-yellow-500"
-      : "Navbaritems group hover:border-yellow-500"
+      ? `Navbaritems group border-current dark:text-white border-pink-500 hover:border-pink-500`
+      : `Navbaritems group hover:border-pink-500`
   }`;
   const AboutClass = `${
     router.pathname.split("/")[1] === "about"
-      ? "Navbaritems group hover:border-indigo-600 dark:text-white border-indigo-600 border-current"
-      : "Navbaritems group hover:border-indigo-600"
+      ? `Navbaritems group hover:border-green-600 dark:text-white border-green-600 border-current`
+      : `Navbaritems group hover:border-green-600`
+    }`;
+  
+  const WorkClass = `${
+    router.pathname.split("/")[1] === "work"
+      ? `Navbaritems group hover:border-indigo-600 dark:text-white border-indigo-600 border-current`
+      : `Navbaritems group hover:border-indigo-600`
   }`;
 
   return (
@@ -69,10 +75,13 @@ const Navbar = () => {
           <Link href="/about">
             <div className={AboutClass}>About</div>
           </Link>
+          <Link href="/work">
+            <div className={WorkClass}>Work</div>
+          </Link>
           <Link href="/projects">
             <div className={ProjectClass}>Projects</div>
           </Link>
-          <div className="Navbaritems group hover:border-green-600">
+          <div className="Navbaritems group hover:border-teal-500">
             <a target="_blank" href="/Harsh_Jha_resume.pdf">
               Resume
             </a>
