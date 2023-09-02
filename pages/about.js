@@ -91,6 +91,7 @@ const About = () => {
         <hr className="h-px my-1 border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
         <ul className="list-disc pl-5 py-3">
           <li>Gaming 🎮 </li>
+          <li>Watching movies, shows and sometimes anime</li>
           <li>
             Music 🎵
             {/* <a
