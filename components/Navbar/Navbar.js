@@ -1,47 +1,37 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import { IoSunnyOutline } from "react-icons/io5";
+import { RxMoon } from "react-icons/rx";
+import { FiGithub } from "react-icons/fi";
+import { BsTwitterX } from "react-icons/bs";
+import { FiLinkedin } from "react-icons/fi";
+import { MdMailOutline } from "react-icons/md";
+import { FiSun } from "react-icons/fi";
 const Navbar = () => {
   const [theme, setTheme] = useState("");
+
+  //Dark theme colors
+  const darkThemeBackground = "bg-[#090B0B]";
+  const darkThemeColor = "text-[#d4d4d4]";
+
+  //Light theme colors
+  const lightThemeBackground = "bg-neutral-100";
+  const lightThemeColor = "text-neutral-900";
+
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       document.body.classList.add("dark");
       setTheme("dark");
       localStorage.theme = "dark";
-      document.body.classList.add("text-[#d4d4d4]");
-      document.body.classList.add("bg-[#121212]");
+      document.body.classList.add(darkThemeColor);
+      document.body.classList.add(darkThemeBackground);
     } else {
       setTheme("");
       localStorage.theme = "light";
-      document.body.classList.add("bg-neutral-100");
-      document.body.classList.add("text-neutral-900");
+      document.body.classList.add(lightThemeBackground);
+      document.body.classList.add(lightThemeColor);
     }
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    // if (
-    //   localStorage.theme === "dark" ||
-    //   (!("theme" in localStorage) &&
-    //     window.matchMedia("(prefers-color-scheme: dark)").matches)
-    // ) {
-    //   document.body.classList.add("dark");
-    //   setTheme("dark");
-    //   localStorage.theme = "dark";
-    // } else {
-    //   localStorage.theme = "light";
-    //   document.body.classList.remove("dark");
-    //   document.body.classList.add("bg-neutral-100");
-    //   document.body.classList.add("text-neutral-900");
-    //   setTheme("");
-    // }
-
-    // // Whenever the user explicitly chooses light mode
-    // localStorage.theme = "light";
-
-    // // Whenever the user explicitly chooses dark mode
-    // localStorage.theme = "dark";
-
-    // // Whenever the user explicitly chooses to respect the OS preference
-    // localStorage.removeItem("theme");
   }, []);
 
   const router = useRouter();
@@ -55,13 +45,16 @@ const Navbar = () => {
     router.pathname.split("/")[1] === "about"
       ? `Navbaritems group hover:border-green-600 dark:text-white border-green-600 border-current`
       : `Navbaritems group hover:border-green-600`
-    }`;
-  
+  }`;
+
   const WorkClass = `${
     router.pathname.split("/")[1] === "work"
       ? `Navbaritems group hover:border-indigo-600 dark:text-white border-indigo-600 border-current`
       : `Navbaritems group hover:border-indigo-600`
   }`;
+
+  const abc =
+    "flex items-center justify-center transition duration-[150] ease-linear  border-neutral-300 hover:border-neutral-400 dark:bg-[#090B0B] h-8 w-8 p-2 rounded-md dark:hover:bg-[#27272A] hover:bg-neutral-200 cursor-pointer";
 
   return (
     <header className="md:w-[65vw] xl:w-[55vw] px-6 m-auto mt-12">
@@ -72,45 +65,86 @@ const Navbar = () => {
       </Link>
       <div className="flex justify-between w-full py-4 font-bold">
         <div className="flex space-x-6">
-          <Link href="/about">
+          {/* <Link href="/about">
             <div className={AboutClass}>About</div>
-          </Link>
+          </Link> */}
           <Link href="/work">
             <div className={WorkClass}>Work</div>
           </Link>
           <Link href="/projects">
             <div className={ProjectClass}>Projects</div>
           </Link>
-          <div className="Navbaritems group hover:border-teal-500">
-            <a target="_blank" href="/Harsh_Jha_resume.pdf">
-              Resume
-            </a>
-          </div>
+
           {/* <div className="Navbaritems group">
             <Link href="/contact">Contact</Link>
           </div> */}
         </div>
-        <button
-          onClick={() => {
-            document.body.classList.toggle("dark");
-            if (theme === "dark") {
-              setTheme("");
-              document.body.classList.add("bg-neutral-100");
-              document.body.classList.add("text-neutral-900");
-              document.body.classList.remove("text-[#d4d4d4]");
-              document.body.classList.remove("bg-[#121212]");
-            } else {
-              setTheme("dark");
-              document.body.classList.remove("bg-neutral-100");
-              document.body.classList.remove("text-neutral-900");
-              document.body.classList.add("text-[#d4d4d4]");
-              document.body.classList.add("bg-[#121212]");
-            }
-          }}
-          className="transition duration-200 ease-linear bg-neutral-200 border-neutral-300 hover:border-neutral-400 dark:bg-neutral-900 h-fit p-1 rounded-md border-[3px] dark:border-neutral-800 dark:hover:border-neutral-700"
-        >
-          {theme === "dark" ? "⛅" : "🌙"}
-        </button>
+        <div className="flex space-x-1">
+          <div className={abc}>
+            <a
+              className="m-0"
+              target="_blank"
+              rel="noreferrer"
+              href="mailto:harshjha872@gmail.com"
+            >
+              <MdMailOutline size={18} />
+            </a>
+          </div>
+          <div className={abc}>
+            <a
+              className="m-0"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/harsh-jha-378917195"
+            >
+              <FiLinkedin size={17} />
+            </a>
+          </div>
+          <div className={abc}>
+            <a
+              className="m-0"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.github.com/harshjha872"
+            >
+              <FiGithub size={16} />
+            </a>
+          </div>
+          <div className={abc}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://twitter.com/harshjha872"
+            >
+              <BsTwitterX size={15} />
+            </a>
+          </div>
+          <button
+            onClick={() => {
+              document.body.classList.toggle("dark");
+              if (theme === "dark") {
+                setTheme("");
+                document.body.classList.add(lightThemeBackground);
+                document.body.classList.add(lightThemeColor);
+                document.body.classList.remove(darkThemeColor);
+                document.body.classList.remove(darkThemeBackground);
+              } else {
+                setTheme("dark");
+                document.body.classList.remove(lightThemeBackground);
+                document.body.classList.remove(lightThemeColor);
+                document.body.classList.add(darkThemeColor);
+                document.body.classList.add(darkThemeBackground);
+              }
+            }}
+            className={abc}
+          >
+            {theme === "dark" ? (
+              <FiSun size={21} />
+            ) : (
+              <RxMoon size={18} />
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );

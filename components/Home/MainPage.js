@@ -19,23 +19,21 @@ const MainPage = () => {
         <div className="text-3xl font-bold tracking-tight md:text-4xl">
           <span>Hey, I&apos;m Harsh!</span>
         </div>
-        <div className="flex text-xl my-5">
+        <div className="flex dark:text-zinc-200 text-xl my-5">
           <span>Welcome to my spot 👋</span>
           {/* <div className="text-blue-700 mx-2">Developer</div> */}
         </div>
-        <div className="pt-3  text-lg">
-        A Full Stack Developer with a zest for innovation. I like to code things from scratch, and enjoy bringing ideas to life in the browser. I&apos;m always open to discussing design work, currently on the lookout for exciting opportunities in the IT realm
+        <div className="pt-3 dark:text-zinc-300 text-lg">
+        I&apos;m a self taught <span className="font-semibold dark:text-white">Full-stack developer</span> who loves to code things from scratch, and enjoy bringing ideas to life in the browser. I&apos;m always open to discuss and build things. Right now im trying to learn and make some awesome projects along the way
         </div>
-        <div className="pt-6  text-lg">
-        
-          Interested in working together? We should queue up a time to chat. Let&apos;s connect and craft some digital magic together! 💼
-          
+        <div className="pt-6 dark:text-zinc-300 text-lg">
+          currently working at <span className="dark:text-white font-semibold">SpectroNOVA</span> as a Frontend developer
         </div>
-        <section className="flex flex-col gap-4 py-12">
+        <section className="flex flex-col gap-4 py-10">
           <h3 className="text-2xl font-bold tracking-tight md:text-2xl">
             Techstack I know
           </h3>
-          <p className=" text-lg pb-2">
+          <p className=" text-lg pb-2 dark:text-zinc-200">
             Techs &amp; frameworks I mostly like to use.
           </p>
           <div className="flex flex-wrap items-center gap-6 md:gap-5 lg:gap-9">
@@ -120,7 +118,7 @@ const MainPage = () => {
               Projects
             </h3>
             <Link href="/projects">
-              <div className="dark:bg-[#161616] border-neutral-300 bg-neutral-50 hover:border-neutral-500 cursor-pointer px-3 py-2 border-[1px] dark:border-neutral-700 dark:hover:border-neutral-600 w-fit h-fit rounded-md">
+              <div className="dark:bg-['#090B0B'] transition duration-[150] border-neutral-300 dark:bg-[#090B0B] hover:border-neutral-500 cursor-pointer px-3 py-2 border-[1px] dark:border-[#27272A] dark:hover:bg-[#27272A] w-fit h-fit rounded-md">
                 View all
               </div>
             </Link>
@@ -159,7 +157,7 @@ const MainPage = () => {
             </div>
           </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </motion.div>
   );

@@ -21,12 +21,6 @@ const About = () => {
           highlight of my work on the web 🕸
         </div>
         <div className="pt-4 text-lg">
-          My only motivation for this site is to show what I&apos;ve learned and
-          made till now, and I hope you like it. I&apos;m Just a quite kid
-          probably looking at the 💻 screen right now trying to resolve a bug
-          sitting in the room all day 🦉   
-        </div>
-        <div className="pt-4 text-lg">
         When I&apos;m not immersed in code, you&apos;ll find me gaming 🎮, grooving to music 🎶, or exploring the vast expanse of the internet 🌐.  
         </div>
         {/* <div className="pt-4 text-lg">I might laugh at my own jokes</div> */}
@@ -42,11 +36,11 @@ const About = () => {
           >
             Harsh Jha
           </a>{" "}
-          to say hi! I always appreciate meeting new people.
+          to say hi!
         </div>
-        <div className="text-3xl font-bold pt-6">Tools</div>
-        <hr className="h-px my-1  border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
-        <ul className="list-disc pl-5 py-3">
+        {/* <div className="text-3xl font-bold pt-6">Tools</div>
+        <hr className="h-px my-1  border-0 bg-neutral-300 dark:bg-neutral-800"></hr> */}
+        {/* <ul className="list-disc pl-5 py-3">
           <li>
             This website is hosted on{" "}
             <a
@@ -86,10 +80,10 @@ const About = () => {
           <li>
             Everything else: <span className="font-semibold">Google</span>
           </li>
-        </ul>
-        <div className="text-3xl font-bold pt-6">Interests</div>
+        </ul> */}
+        <div className="text-3xl font-bold pt-12">Interests</div>
         <hr className="h-px my-1 border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
-        <ul className="list-disc pl-5 py-3">
+        <ul className="list-disc pl-5 py-3" style={{ paddingBottom: '125px'}}>
           <li>Gaming 🎮 </li>
           <li>Watching movies, shows and sometimes anime</li>
           <li>
@@ -105,7 +99,7 @@ const About = () => {
           </li>
           <li>Watching random stuff on the internet ✨</li>
         </ul>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </motion.div>
   );

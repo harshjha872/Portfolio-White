@@ -25,7 +25,7 @@ const Footer = () => {
   }, [router]);
 
   return (
-    <section>
+    <section className="md:w-[65vw] xl:w-[55vw] px-6 m-auto mt-12">
       <hr className="h-px my-4  border-0 bg-neutral-300 dark:bg-neutral-800"></hr>
       {songLink ? (
         <div className="flex justify-between text-neutral-600 dark:text-neutral-300 text-sm font-semibold">
@@ -61,20 +61,9 @@ const Footer = () => {
           </div>
         </div> */}
       {/* </div> */}
-      <div className="my-3 w-fit cursor-pointer text-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-600 text-sm dark:text-neutral-500 font-semibold">
-        <a
-          href="https://github.com/harshjha872"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Github
-        </a>
-      </div>
+      <div className="my-3 w-fit cursor-pointer text-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-600 text-sm dark:text-neutral-500 font-semibold"></div>
       <div className="pt-4 text-[12px] text-neutral-500 dark:text-neutral-600">
-        Made by{" "}
-        <a href="mailto:harshjha872@gmail.com" className="font-semibold">
-          Harsh Jha
-        </a>
+        Made by <span className="font-semibold">Harsh Jha</span>
       </div>
       <SideBar />
     </section>

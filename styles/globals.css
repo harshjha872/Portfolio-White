@@ -23,9 +23,10 @@ a {
   html {
     color-scheme: dark;
   }
+  
   body {
-    color: #d4d4d4;
-    background: #121212;
+    /* color: #d4d4d4; */
+    /* background: #121212; */
     /* background: #101010; */
     /* background: #040b14; */
   }
@@ -34,7 +35,7 @@ a {
 @layer components {
   .sideBarIcons {
     @apply flex h-10 w-10 justify-center items-center
-    dark:bg-[#202020] rounded-3xl hover:rounded-xl bg-neutral-200 dark:border-neutral-900
+    dark:bg-zinc-900 rounded-3xl hover:rounded-xl bg-neutral-200 dark:border-neutral-900
     transition-all duration-300 ease-linear cursor-pointer hover:text-violet-500;
   }
 
