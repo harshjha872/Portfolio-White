@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { SiJavascript } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import NewProjectCard from "../Projects/NewProjectCard";
 import Footer from "../footer/Footer";
 import Link from "next/link";
@@ -24,10 +25,19 @@ const MainPage = () => {
           {/* <div className="text-blue-700 mx-2">Developer</div> */}
         </div>
         <div className="pt-3 dark:text-zinc-300 text-lg">
-        I&apos;m a self taught <span className="font-semibold dark:text-white">Full-stack developer</span> who loves to code things from scratch, and enjoy bringing ideas to life in the browser. I&apos;m always open to discuss and build things. Right now im trying to learn and make some awesome projects along the way
+          I&apos;m a self taught{" "}
+          <span className="font-semibold dark:text-white">
+            Full-stack developer
+          </span>{" "}
+          who loves to code things from scratch, and enjoy bringing ideas to
+          life in the browser. I&apos;m always open to discuss and build things.
+          Right now im trying to learn and make some awesome projects along the
+          way
         </div>
         <div className="pt-6 dark:text-zinc-300 text-lg">
-          currently working at <span className="dark:text-white font-semibold">SpectroNOVA</span> as a Frontend developer
+          currently working at{" "}
+          <span className="dark:text-white font-semibold">SpectroNOVA</span> as
+          a Frontend developer
         </div>
         <section className="flex flex-col gap-4 py-10">
           <h3 className="text-2xl font-bold tracking-tight md:text-2xl">
@@ -37,7 +47,7 @@ const MainPage = () => {
             Techs &amp; frameworks I mostly like to use.
           </p>
           <div className="flex flex-wrap items-center gap-6 md:gap-5 lg:gap-9">
-            <SiJavascript className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
+            <SiTypescript className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" />
             <svg
               className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"
               viewBox="0 0 24 24"
