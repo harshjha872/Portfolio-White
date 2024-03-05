@@ -74,7 +74,11 @@ const Navbar = () => {
           <Link href="/projects">
             <div className={ProjectClass}>Projects</div>
           </Link>
-
+          <div className="Navbaritems group hover:border-teal-500">
+            <a target="_blank" href="/Harsh_Jha_resume.pdf">
+              Resume
+            </a>
+          </div>
           {/* <div className="Navbaritems group">
             <Link href="/contact">Contact</Link>
           </div> */}
