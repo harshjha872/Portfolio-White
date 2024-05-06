@@ -8,6 +8,8 @@ import { BsTwitterX } from "react-icons/bs";
 import { FiLinkedin } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
 import { FiSun } from "react-icons/fi";
+import { Mail, Linkedin, Github, Sun } from "lucide-react";
+
 const Navbar = () => {
   const [theme, setTheme] = useState("");
 
@@ -84,45 +86,45 @@ const Navbar = () => {
           </div> */}
         </div>
         <div className="flex space-x-1">
-          <div className={abc}>
-            <a
-              className="m-0"
-              target="_blank"
-              rel="noreferrer"
-              href="mailto:harshjha872@gmail.com"
-            >
-              <MdMailOutline size={18} />
-            </a>
-          </div>
-          <div className={abc}>
-            <a
-              className="m-0"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/harsh-jha-378917195"
-            >
-              <FiLinkedin size={17} />
-            </a>
-          </div>
-          <div className={abc}>
-            <a
-              className="m-0"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.github.com/harshjha872"
-            >
-              <FiGithub size={16} />
-            </a>
-          </div>
-          <div className={abc}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://twitter.com/harshjha872"
-            >
-              <BsTwitterX size={15} />
-            </a>
-          </div>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="mailto:harshjha872@gmail.com"
+          >
+            <div className={abc}>
+              {/* <MdMailOutline size={18} /> */}
+              <Mail />
+            </div>
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/harsh-jha-378917195"
+            target="_blank"
+          >
+            <div className={abc}>
+              {/* <FiLinkedin size={17} /> */}
+              <Linkedin />
+            </div>
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.github.com/harshjha872"
+          >
+            <div className={abc}>
+              {/* <FiGithub size={16} /> */}
+              <Github />
+            </div>
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/harshjha872"
+          >
+            <div className={abc}>
+              <BsTwitterX size={14} />
+            </div>
+          </a>
           <button
             onClick={() => {
               document.body.classList.toggle("dark");
@@ -142,11 +144,7 @@ const Navbar = () => {
             }}
             className={abc}
           >
-            {theme === "dark" ? (
-              <FiSun size={21} />
-            ) : (
-              <RxMoon size={18} />
-            )}
+            {theme === "dark" ? <Sun /> : <RxMoon size={18} />}
           </button>
         </div>
       </div>
