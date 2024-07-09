@@ -18,7 +18,7 @@ const About = () => {
            SpectroNOVA
           </div>
           <div className="my-1 dark:text-zinc-400">
-            Frontend Developer · Full-time/Remote
+            Frontend Developer · Remote
           </div>{" "}
         <span className="dark:text-zinc-400">Mumbai, India </span>
         </div>
@@ -28,10 +28,10 @@ const About = () => {
       <div className="flex justify-between mt-8 mb-72">
         <div>
           <div className="text-lg font-semibold ">
-           Constems-AI
+           Constems-AI Systems
           </div>
           <div className="my-1 dark:text-zinc-400">
-            Full-stack Developer · Internship/Remote
+            Full-stack Developer · Remote
           </div>{" "}
           <span className="dark:text-zinc-400">Noida, India </span>
         </div>

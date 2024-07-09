@@ -136,12 +136,21 @@ const MainPage = () => {
           <div className="flex flex-col gap-4 flex-wrap sm:flex-nowrap">
             <div className="flex gap-4 flex-wrap sm:flex-nowrap">
               <NewProjectCard
+                year={2024}
+                projectHeading="AI News"
+                desc="Delivering AI News with Newsletter"
+                source="https://github.com/harshjha872/AI-news"
+                demo="https://ai-news-kohl.vercel.app/"
+              />
+              <NewProjectCard
                 year={2022}
                 projectHeading="MoviesSaga"
                 desc="A Simple movie recommendation website"
                 source="https://github.com/harshjha872/Movies-App"
                 demo="https://moviessaga.vercel.app/"
               />
+            </div>
+            <div className="flex gap-4 flex-wrap sm:flex-nowrap">
               <NewProjectCard
                 year={2023}
                 projectHeading="Twitter Clone"
@@ -149,20 +158,12 @@ const MainPage = () => {
                 source="https://github.com/harshjha872/twitter-clone"
                 demo="https://twitter-clonev1.vercel.app/"
               />
-            </div>
-            <div className="flex gap-4 flex-wrap sm:flex-nowrap">
               <NewProjectCard
                 year={2021}
                 projectHeading="Maper"
                 desc="Tracker for running/Cycling on map"
                 source="https://github.com/harshjha872/Maper"
                 demo="https://maper.vercel.app/"
-              />
-              <NewProjectCard
-                year={2020}
-                projectHeading="KreatePoll"
-                desc="Polling website"
-                source="https://github.com/harshjha872/PollPoint_"
               />
             </div>
           </div>

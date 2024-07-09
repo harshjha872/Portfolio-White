@@ -50,12 +50,21 @@ const Projects = () => {
             <div className="flex flex-col gap-4 flex-wrap sm:flex-nowrap">
               <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
+                  year={2024}
+                  projectHeading="AI News"
+                  desc="Delivering AI News with Newsletter"
+                  source="https://github.com/harshjha872/AI-news"
+                  demo="https://ai-news-kohl.vercel.app/"
+                />
+                <NewProjectCard
                   year={2022}
                   projectHeading="MoviesSaga"
                   desc="A Simple movie recommendation website"
                   source="https://github.com/harshjha872/Movies-App"
                   demo="https://moviessaga.vercel.app/"
                 />
+              </div>
+              <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2023}
                   projectHeading="Twitter Clone"
@@ -63,8 +72,6 @@ const Projects = () => {
                   source="https://github.com/harshjha872/twitter-clone"
                   demo="https://twitter-clonev1.vercel.app/"
                 />
-              </div>
-              <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2021}
                   projectHeading="Maper"
@@ -72,40 +79,40 @@ const Projects = () => {
                   source="https://github.com/harshjha872/Maper"
                   demo="https://maper.vercel.app/"
                 />
+              </div>
+              <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2020}
                   projectHeading="KreatePoll"
                   desc="Polling website"
                   source="https://github.com/harshjha872/PollPoint_"
                 />
-              </div>
-              <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2020}
                   projectHeading="Obstacle Avoiding Robot"
                   desc="A robot made with sensor that avoids obstacles"
                   video="https://www.youtube.com/watch?v=IuPVCZulkXc"
                 />
+              </div>
+              <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2020}
                   projectHeading="E-commerce"
                   desc="An E-commerce website like amazon"
                   source="https://github.com/harshjha872/Node-js/tree/main/Shop%20App"
                 />
-              </div>
-              <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2021}
                   projectHeading="Dice game"
                   desc="A dice game in which first person to score 100 wins"
                   source="https://github.com/harshjha872/Dice-Game"
                 />
-                <NewProjectCard
+                {/* <NewProjectCard
                   year={2020}
                   projectHeading="Guess the number"
                   desc="A game of guessing numbers"
                   source="https://github.com/harshjha872/GuessTheNumber-game"
-                />
+                /> */}
               </div>
             </div>
           </section>
