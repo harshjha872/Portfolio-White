@@ -36,8 +36,8 @@ const MainPage = () => {
         </div>
         <div className="pt-6 dark:text-zinc-300 text-lg">
           currently working at{" "}
-          <span className="dark:text-white font-semibold">SpectroNOVA</span> as
-          a Frontend developer
+          <span className="dark:text-white font-semibold">Global Markets Tech Solutions Pvt Ltd. (SpectroNOVA)</span> as
+          a Full Stack developer
         </div>
         <section className="flex flex-col gap-4 py-10">
           <h3 className="text-2xl font-bold tracking-tight md:text-2xl">

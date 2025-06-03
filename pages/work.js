@@ -18,7 +18,7 @@ const About = () => {
            SpectroNOVA
           </div>
           <div className="my-1 dark:text-zinc-400">
-            Frontend Developer · Remote
+            Full Stack Developer · Remote
           </div>{" "}
         <span className="dark:text-zinc-400">Mumbai, India </span>
         </div>
