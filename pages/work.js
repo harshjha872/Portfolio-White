@@ -15,7 +15,7 @@ const About = () => {
       <div className="flex justify-between mb-8">
         <div>
           <div className="text-lg font-semibold ">
-           SpectroNOVA
+           Global Markets Tech Solutions Pvt Ltd. (SpectroNOVA)
           </div>
           <div className="my-1 dark:text-zinc-400">
             Full Stack Developer · Remote
