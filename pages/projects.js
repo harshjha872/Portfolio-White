@@ -51,7 +51,7 @@ const Projects = () => {
               <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
                   year={2025}
-                  projectHeading="Task Management App"
+                  projectHeading="Taskbuddy"
                   desc="Handle all yours task at one place"
                   source="https://github.com/harshjha872/task-management"
                   demo="https://task-management-delta-rust.vercel.app/"
