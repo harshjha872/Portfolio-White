@@ -50,11 +50,11 @@ const Projects = () => {
             <div className="flex flex-col gap-4 flex-wrap sm:flex-nowrap">
               <div className="flex gap-4 flex-wrap sm:flex-nowrap">
                 <NewProjectCard
-                  year={2024}
-                  projectHeading="AI News"
-                  desc="Delivering AI News with Newsletter"
-                  source="https://github.com/harshjha872/AI-news"
-                  demo="https://ai-news-kohl.vercel.app/"
+                  year={2025}
+                  projectHeading="Task Management App"
+                  desc="Handle all yours task at one place"
+                  source="https://github.com/harshjha872/task-management"
+                  demo="https://task-management-delta-rust.vercel.app/"
                 />
                 <NewProjectCard
                   year={2022}
